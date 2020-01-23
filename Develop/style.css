@@ -139,3 +139,9 @@ button[disabled] {
 .inputStyle{
   width:100%
 }
+
+.checkStyle{
+  margin: auto;
+  padding-top: 10px;
+  padding-left: 10px;
+}

@@ -48,15 +48,28 @@
         <div class="container">
           <div class="row">
             <form class = "col-12">
-              Enter desired lenght of password (8-128) <br>
+              Enter desired length of password (8-128) <br>
                       <input id="passLength" class="inputStyle" type="text" name="passwordLength"> <br>
             </form>
+            <div class = "row checkStyle">
+              <div class="form-check col-12">
+                <input class="form-check-input position-static" type="checkbox" id="upper" value="option1" aria-label="..."> Uppercase
+              </div>
+              <div class="form-check col-12">
+                <input class="form-check-input position-static" type="checkbox" id="lower" value="option1" aria-label="..."> Lowercase
+              </div>
+              <div class="form-check col-12">
+                <input class="form-check-input position-static" type="checkbox" id="numeric" value="option1" aria-label="..."> Numeric
+              </div>
+              <div class="form-check col-12">
+                <input class="form-check-input position-static" type="checkbox" id="special" value="option1" aria-label="..."> Special Characters
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button id="generate" type="button" class="btn btn-secondary" data-dismiss="modal">Run</button>
       </div>
     </div>
   </div>
