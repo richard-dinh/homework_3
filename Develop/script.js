@@ -14,7 +14,11 @@ const generatePassword = function (){
   console.log(numericCheck)
   console.log(specialCheck)
   console.log(passLength)
-  
+
+  let upperString = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  let lowerString = 'abcdefghijklmnopqrstuvwxyz'
+  let numericString = '0123456789'
+  let specialString = `!"@#$%&^*()'+-,./:;<=>?[]\`|~\\`
   //set passwrod to empty
 //   let password = ''
 //   if (specialCharacters === 'uppercase') {
