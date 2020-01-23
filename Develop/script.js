@@ -1,6 +1,5 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-console.log(`GenerateBtn is ${generateBtn}`)
 // Write password to the #password input
 
 const generatePassword = function (){
@@ -39,33 +38,7 @@ const generatePassword = function (){
   }
 
   return password
-  //set passwrod to empty
-//   let password = ''
-//   if (specialCharacters === 'uppercase') {
-//   let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-//   for (let i = 0; i < passLength; i++) {
-//     password += upper.charAt(Math.floor(Math.random() * upper.length))
-//   }
-// }
-//   else if (specialCharacters === 'lowercase') {
-//     let lower = 'abcdefghijklmnopqrstuvwxyz'
-//     for (let i = 0; i < passLength; i++) {
-//       password += lower.charAt(Math.floor(Math.random() * lower.length))
-//     }
-//   }
-//   else if (specialCharacters === 'numeric') {
-//     let num = '0123456789'
-//     for (let i = 0; i < passLength; i++) {
-//       password += num.charAt(Math.floor(Math.random() * num.length))
-//     }
-//   }
-//   else if (specialCharacters === 'special characters') {
-//     let special = `!"@#$%&^*()'+-,./:;<=>?[]\`|~\\`
-//     for (let i = 0; i < passLength; i++) {
-//       password += special.charAt(Math.floor(Math.random() * special.length))
-//     }
-//   }
-//   return password
+
 
 }
 function writePassword() {
