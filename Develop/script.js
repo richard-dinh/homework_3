@@ -8,9 +8,13 @@ const inputCheck = function (){
   let lowerCheck = document.getElementById('lower').checked
   let numericCheck = document.getElementById('numeric').checked
   let specialCheck = document.getElementById('special').checked
-  let isValidNum= !Number.isInteger(parseInt(passLength, 10)) || parseInt(passLength, 10) < 8 || parseInt(passLength, 10) > 128
-  let isChecked = !upperCheck && !lowerCheck && !numericCheck && !specialCheck
-  if (isValidNum) {
+  let isValidNum= Number.isInteger(parseInt(passLength, 10)) && parseInt(passLength, 10) >= 8 && parseInt(passLength, 10) <= 128
+  // let temp1 = Number.isInteger(parseInt(passLength, 10))
+  // let temp2 = parseInt(passLength,10) >= 8
+  // let temp3 = parseInt(passLength, 10)<=128
+
+  let isChecked = upperCheck || lowerCheck || numericCheck || specialCheck
+  if (!isValidNum) {
     mod.setAttribute('data-dismiss', '')
     passLength = ""
     // let node = document.createElement('p')
@@ -24,7 +28,7 @@ const inputCheck = function (){
   else{
     document.getElementById('formCheck').innerHTML = ``
   }
-  if(isChecked){
+  if(!isChecked){
     mod.setAttribute('data-dismiss', '')
     // let node = document.createElement('p')
     // node.className = 'incorrect'
@@ -37,7 +41,7 @@ const inputCheck = function (){
   else{
     document.getElementById('boxCheck').innerHTML = ``
   }
-   if(!isChecked && !isValidNum) {
+   if(isChecked && isValidNum) {
     mod.setAttribute('data-dismiss', 'modal')
   }
 }
@@ -47,7 +51,7 @@ const generatePassword = function (){
   let lowerCheck = document.getElementById('lower').checked
   let numericCheck = document.getElementById('numeric').checked
   let specialCheck = document.getElementById('special').checked
-  let passLength = document.getElementById('passLength').value
+  let passLength = Math.floor(document.getElementById('passLength').value)
 
   // while (!Number.isInteger(parseInt(passLength, 10)) || parseInt(passLength, 10) < 8 || parseInt(passLength, 10) > 128) {
     
