@@ -1,13 +1,31 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
-
+// const incorrectNumber = function (){
+//   document.getElementById('passLength').innerHTML = ""
+//   document.getElementById('form').innerHTML = `
+//   <br>
+//   <p class = "incorrect"> Invalid input! Please enter a number between 8-128. </p>`
+//   let mod = document.getElementById('exampleModal')
+//   mod.setAttribute('exampleModal', 'data-backdrop="static"')
+// }
 const generatePassword = function (){
   let upperCheck = document.getElementById('upper').checked
   let lowerCheck = document.getElementById('lower').checked
   let numericCheck = document.getElementById('numeric').checked
   let specialCheck = document.getElementById('special').checked
   let passLength = document.getElementById('passLength').value
+
+  while (!Number.isInteger(parseInt(passLength, 10)) || parseInt(passLength, 10) < 8 || parseInt(passLength, 10) > 128) {
+    alert('Invalid Input! Please enter a number 8-128')
+    let mod = document.getElementById('form')
+    mod.reset()
+  //   document.getElementById('form').innerHTML = `
+  // <br>
+  // <p class = "incorrect"> Invalid input! Please enter a number between 8-128. </p>`
+  //   let mod = document.getElementById('exampleModal')
+  //   mod.setAttribute('exampleModal', 'data-backdrop="static"')
+  }
   console.log(upperCheck)
   console.log(lowerCheck)
   console.log(numericCheck)
@@ -38,8 +56,6 @@ const generatePassword = function (){
   }
 
   return password
-
-
 }
 function writePassword() {
   //this line selects the element with the password ID
@@ -49,7 +65,6 @@ function writePassword() {
   // This line is the password displayed in the box after the button is clicked
   // passwordText.value = password;
   passwordText.value = password
-
 }
 
 // Add event listener to generate button
